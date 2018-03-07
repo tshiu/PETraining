@@ -14,7 +14,7 @@ count = 0
 response = nil 
 #setting path as the endpoint, looking to put record_type from prompt into the endpoint
 path = /v2.0/{record_type}
-
+  
 #for each district-app connection
 For each token
 
