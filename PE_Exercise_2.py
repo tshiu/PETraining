@@ -16,7 +16,7 @@ response = nil
 
 #this is the path/endpoint that will be attached onto the URL to access the students endpoint; this is the initial endpoint that is used
 path = /v2.0/students
-
+  
 #setting a loop-like function so that we can repeat the steps below until 
 do {
 	#looking to retrieve the response from the students endpoint which will return a JSON response
