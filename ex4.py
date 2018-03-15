@@ -1,5 +1,5 @@
 cars = 100
-space_in_a_car = 4.0
+space_in_a_car = 4
 drivers = 30 
 passengers = 90
 cars_not_driven = cars - drivers
@@ -21,6 +21,10 @@ print "We have", passengers, "to carpool today."
 print "We need to put about", average_passengers_per_car, "in each car."
 
 #Study Drill
-#1. car_pool_capacity is not a variable; carpool_capacity is
-#2. Floating point numbers are written in binary; so fractions are only estimations.
+#1. No, this is not neccessary. If you replace it with an integer, then the response will also be 
+#   in an integer. 
+#2. Floating point numbers are non integers. They written in binary; so fractions are only estimations.
 #3. Above
+#4. Yes!
+#5. Yes! 
+#6. Ran in python. Can set variables and then multiply variables
