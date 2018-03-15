@@ -35,14 +35,35 @@ line3 = raw_input("line 3: ")
 print "I'm going to write these to the file."
 
 #writing these inot the files
-target.write(line1)
-target.write("\n")
-target.write(line2)
-target.write("\n")
-target.write(line3)
-target.write("\n")
+target.write(line1 + '\n' + line2 + '\n' + line3 + '\n')
 
 print "And finally, we close it."
 
 #closes the working file
 target.close()
+
+#SD
+
+#1. Above
+#2. The below will just print the file.
+
+#from sys import argv
+
+#txt = open(filename)
+
+
+#print "Here's your file %r:" % filename 
+#print txt.read ()
+
+#txt.close()
+
+
+#3. Rewritten above! used + signs 
+#4. You have to set it as a working file because read is default. If it is a
+#.  read file, then it doesn't allow you to edit it. 
+
+#5. It seems as though you do not need to truncate the file as it is already 
+#.  truncated with w. 
+
+
+
