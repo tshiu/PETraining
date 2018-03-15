@@ -28,3 +28,10 @@ end12 = "r"
 # with the variable set
 print end1 + end2 + end3 + end4 + end5 + end6,
 print end7 + end8 + end9 + end10 + end11 + end12
+
+#SD
+#1. Above.
+#2. Above.
+#3. Ok!
+#4. Yes.
+#5. Yes.
