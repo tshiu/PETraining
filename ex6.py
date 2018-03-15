@@ -36,4 +36,15 @@ print joke_evaluation % hilarious
 w = "This is the left side of ..."
 e = "a string with a right side."
 
+#will print out the combined string of w and e
 print w + e 
+
+#SD 
+#1. Above
+#2. joke_evaluation = "Isn't that joke so funny?! %r"
+#	print "I also said: '%s'. " % y
+#	print "I said: %r." % x 
+#   y = "Those who know %s and those who %s." % (binary, do_not)
+#3. I think so? 
+#4. I looked this up and it states that w + e makes a longer string becasue
+#.  python developers defined the + as a concatenation function. 
