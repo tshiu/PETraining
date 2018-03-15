@@ -21,3 +21,7 @@ print formatter % (
     "But it didn't sing.",
     "So I said goodnight."
 )
+
+#SD 
+# 1. Yes!
+# 2. There is already a single quote in the string, so Python defaults to double quotes around the single quote. 
