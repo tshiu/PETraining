@@ -23,3 +23,26 @@ print tabby_cat
 print persian_cat
 print backslash_cat
 print fat_cat
+
+#SD 
+
+#1.  Couldn't find index cards but found this: https://quizlet.com/13422280/python-escape-sequences-flash-cards/
+#.   Will reference and study more of these items.
+#2.  It does the same thing, but perhaps we would use single quotes if we wanted triple quotes in the string.
+#3.  Combining variables:
+
+sent = 'This is a sentence.'
+
+print '''
+Combining variables:
+\t* Tab
+\t* %r
+''' % sent 
+
+#4.  Output is "'a'" ''a'' a. The first adds single quotes, the second uses two single, the last is nothing. 
+
+test = """
+"%r" '%r' %s
+"""
+
+print test % ("a", "a", "a")
