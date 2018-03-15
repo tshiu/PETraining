@@ -1,4 +1,3 @@
-age = raw_input("How old are you? ")
 height = raw_input ("How tall are you? ")
 weight = raw_input ("How much do you weigh? ")
 
@@ -12,6 +11,11 @@ print "So, you're %r old, %r tall and %r heavy." % (
 #raw_input(...)
     #raw_input([prompt]) -> string
 
-#2. pydoc is a documentation generator and help system; basically like a dictionary
-#3.  "%r is for debugging and is “raw representation” while %s is for display"
+#2. Yes!
+#3. pydoc is a documentation generator and help system; basically like a dictionary
+#4. Read through the documentation. Not quite clear yet but good context?
+#open - Open a file using the file() type, returns a file object
+# 	OS imports specific operating system functionality 
+#  Sys - "system specifc parameters?" - unsure of this one right now
+
     
