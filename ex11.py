@@ -8,10 +8,9 @@ weight = raw_input()
 print "So, you're %r old, %r tall and %r heavy." % (
 	age, height, weight)
 
-#Study Drills
-#1.raw_input is a prompt to the user; best to avoid input() 
-#  as latter tries to interpret input, Best to use raw_input
-
+# Study Drills
+# 1. raw_input is a prompt to the user; best to avoid input() 
+# 2. 
 
 #Stack Overflow example with int(raw_input()) and enters
 #print '\nWhat\'s your name ?',
@@ -25,3 +24,9 @@ print "So, you're %r old, %r tall and %r heavy." % (
 
 #print '\nSo, %s is %d years old, %d inches tall and weighs %d kgs.\n' %(
 #name, age, height, weight)
+
+# 3. 
+birthdate = raw_input("What is your birthday?") 
+print "I hope %s is a great day for you!" % birthdate  
+
+# 4. Python uses the quotes to indicate a demarcation. It is escaping the single quote so that the line will print. 
