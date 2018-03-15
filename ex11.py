@@ -1,32 +1,21 @@
-print "How old are you?",
-age = raw_input()
-print "How tall are you?", 
-height = raw_input() 
-print "How much do you weigh?",
-weight = raw_input()
+age = raw_input("How old are you? ")
+height = raw_input ("How tall are you? ")
+weight = raw_input ("How much do you weigh? ")
 
 print "So, you're %r old, %r tall and %r heavy." % (
-	age, height, weight)
+    age, height, weight)
 
-# Study Drills
-# 1. raw_input is a prompt to the user; best to avoid input() 
-# 2. 
+#Study Drills
+#1. pydoc raw_input 
+#Help on built-in function raw_input in module __builtin__:
 
-#Stack Overflow example with int(raw_input()) and enters
-#print '\nWhat\'s your name ?',
-#name = raw_input('--> ')
-#print '\nHow old are you, %s?' % name,
-#age = int(raw_input())
-#print '\nHow tall are you (in inches), %s?' % name,
-#height = int(raw_input())
-#print '\nHow much do you weigh (in kgs), %s?' % name,
-#weight = int(raw_input())
+#raw_input(...)
+    #raw_input([prompt]) -> string
 
-#print '\nSo, %s is %d years old, %d inches tall and weighs %d kgs.\n' %(
-#name, age, height, weight)
+#2. Yes!
+#3. pydoc is a documentation generator and help system; basically like a dictionary
+#4. Read through the documentation. Not quite clear yet but good context?
+#open - Open a file using the file() type, returns a file object
+# 	OS imports specific operating system functionality 
+#  Sys - "system specifc parameters?" - unsure of this one right now
 
-# 3. 
-birthdate = raw_input("What is your birthday?") 
-print "I hope %s is a great day for you!" % birthdate  
-
-# 4. Python uses the quotes to indicate a demarcation. It is escaping the single quote so that the line will print. 
