@@ -69,8 +69,13 @@ in_file.close()
 from sys import argv
 script, from_file, to_file = argv
 
-#opening to_file as a working edit and then writing whatever is in that
-#file into from_file as a giant string
+#first we open the from_file as it is in between the most parentheses; we do this 
+#so that we can create an editable object that we can manipulate 
+#then we are writing this opened readable file object into the to_file which is opened
+#in a working mode so that we can transfer from_file's text to to_file.
+
+#We are editing the files directly so we need to close the actual file 
+
 open(to_file, 'w').write(open(from_file).read())
 
 to_file.close()
