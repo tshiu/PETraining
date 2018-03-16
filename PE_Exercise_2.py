@@ -1,6 +1,9 @@
-Write a script that calculates, for a given district-app connection, how many shared students are associated with multiple schools.
+#Write a script that calculates, for a given district-app connection, 
+#how many shared students are associated with multiple schools.
 
-var {district_id} = prompt("What is the district_id?");
+from sys import argv
+
+script, district_id = argv
 
 #print the prompt so that we can verify that the ID is valid 
 print district_id 
@@ -14,7 +17,8 @@ count = 0
 #defining the response; setting a variable?
 response = nil
 
-#this is the path/endpoint that will be attached onto the URL to access the students endpoint; this is the initial endpoint that is used
+#this is the path/endpoint that will be attached onto the URL to access 
+#the students endpoint; this is the initial endpoint that is used
 path = /v2.0/students
 
 #setting a loop-like function so that we can repeat the steps below until 
@@ -25,7 +29,7 @@ do {
 	#paging through each student in the response body
 	For each student in response.data
 
-		If student.schools.length > 1, 
+		If student.schools.len > 1, 
 			#looking if the student is associated with more than 1 school, I am looking to add 1 to the count
 			then count++ 
 
@@ -35,4 +39,4 @@ do {
 } while (path is present);
 
 #should print the final count
-console.log(count) 
+print count 
