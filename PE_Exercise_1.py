@@ -45,7 +45,7 @@ do {
 	path = response.links[1].uri 
 
 #designed to continue to count until there is no pagination link at the end
-} while (path is present);a
+} while (path is present);
 
 #print the final tally
 
