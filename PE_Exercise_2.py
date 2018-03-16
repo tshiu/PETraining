@@ -22,7 +22,7 @@ response = nil
 path = /v2.0/students
 
 #setting a loop-like function so that we can repeat the steps below until 
-do {
+while(responseURI is present:
 	#looking to retrieve the response from the students endpoint which will return a JSON response
 	response = GET https://api.clever.com+path
 
