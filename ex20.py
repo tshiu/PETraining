@@ -15,9 +15,11 @@ def print_all(f):
 def rewind(f):
 	f.seek(0)
 
-# function meant to print the specified line in a file
-# this will accept two arguments, the first is the line_count and the second is 
-# the name of the file
+# function meant to print a line in the file
+# readline will go to the first line and stop when there is an enter space
+# this function will simply print out line_count and the first line in the file
+# each time readline is called, it will read the next line in the file as a string;
+# it currently does not accept any parameters so it will iterate by 1
 def print_a_line(line_count, f):
 	print line_count, f.readline()
 
@@ -38,18 +40,20 @@ rewind(current_file)
 
 print "Let's print three lines:"
 
-# setting the line count as 1, and the calling the print_a_line function that will 
-# print the specified line of the file object
-current_line = 1
+# setting the line count as 1, 
+# calling print_a_line will print the argument specified and then the first line of the file
+# as this is the first time the readline is called
+current_line =  1
 print_a_line(current_line, current_file)
 
-#incrementing line count by 1
-#now current line is 2 
+# incrementing line count by 1 to now print 2
+# readline is now being called again so it will increment by one and print the second line.
+# this is unrelated to the current_line that is accepted as it is incrementing on its own accord
 current_line += 1
 print_a_line(current_line, current_file)
 
-#incrementing line count by 1
-#now current line is 3 
+# incrementing line count by 1, will print 3
+# readlline is being called for the third time so it will print the third line in the file
 current_line += 1
 print_a_line(current_line, current_file)
 
@@ -61,4 +65,4 @@ print_a_line(current_line, current_file)
 #4. seek tells you where to start in the file, if I change the 0 -> 1, 
 # then it will skip over the first character, this essentially tells us that 
 # rewind puts us at the very first character the in the file since it is beginning
-#5. 
+#5. Above!
