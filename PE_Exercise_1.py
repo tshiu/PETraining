@@ -1,3 +1,4 @@
+
 #Prompt: Write a script that calculates, for a given application, how many total teachers are shared across all of its districts.
 
 #Would like to get input as to what record we are looking to query, will probably change this to argv module
@@ -11,25 +12,28 @@ print """
 You would like to retrieve the total number of %s in the district. 
 Is this correct? Press enter to proceed or CTRL-C to escape.
 """ % record_type
+
 raw_input()
 
-#will need to retrieve the tokens for all of the districts as 
-#this is based on each district-app connection
-GET tokens at https://clever.com/oauth/tokens?owner_type=district
+def total_users(record_type,district):
 
-#setting count at 0 to start
-count = 0
+	#will need to retrieve the tokens for all of the districts as 
+	#this is based on each district-app connection
+    GET tokens at https://clever.com/oauth/tokens?owner_type=district
 
-#setting response as nil now so that it can be called within the loop-like function
-response = nil 
+	#setting count at 0 to start
+	count = 0
 
-#setting path as the endpoint to put record_type from prompt into the endpoint
-path = /v2.0/{record_type}
-  
-#for each district-app connection
-For each token
+	#setting response as nil now so that it can be called within the loop-like function
+	response = nil 
 
-do {
+	#setting path as the endpoint to put record_type from prompt into the endpoint
+	path = /v2.0/{record_type}
+
+	#for each district-app connection
+	For each token
+
+		do {
 	#using token to ping the API to retrieve the JSON response
 	response = GET https://api.clever.com+path
 	
@@ -44,9 +48,10 @@ do {
 	#taking the pagination link and appending that to the end of the URI in case there are more responses
 	path = response.links[1].uri 
 
-#designed to continue to count until there is no pagination link at the end
-} while (path is present);
+		#designed to continue to count until there is no pagination link at the end
+		} while (path is present);
 
-#print the final tally
+	#print the final tall y
+	print count
 
-print count
+
