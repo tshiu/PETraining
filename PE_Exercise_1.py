@@ -1,4 +1,3 @@
-
 #Prompt: Write a script that calculates, for a given application, how many total teachers are shared across all of its districts.
 
 #Would like to get input as to what record we are looking to query, will probably change this to argv module
@@ -15,12 +14,6 @@ Is this correct? Press enter to proceed or CTRL-C to escape.
 
 raw_input()
 
-def total_users(record_type,district):
-
-	#will need to retrieve the tokens for all of the districts as 
-	#this is based on each district-app connection
-    GET tokens at https://clever.com/oauth/tokens?owner_type=district
-
 	#setting count at 0 to start
 	count = 0
 
@@ -30,10 +23,32 @@ def total_users(record_type,district):
 	#setting path as the endpoint to put record_type from prompt into the endpoint
 	path = /v2.0/{record_type}
 
-	#for each district-app connection
-	For each token
+	#will set client ID
+	client_ID = [Client_ID_for_district]
+	#will set client secret 
+	client_secret = [Client_Secret_for_district]
 
-		do {
+def get_tokens(district):
+
+	#will need to retrieve the tokens for all of the districts as 
+	#this is based on each district-app connection
+	owner_type = district 
+	
+	Construct Authorization header using client_id and client_secret 
+
+    GET tokens at https://clever.com/oauth/tokens?owner_type=district
+    
+    return list_of_tokens
+
+get_tokens
+
+for token in list_of_tokens:
+
+total_users 
+
+def total_users(record_type,district):
+
+	
 	#using token to ping the API to retrieve the JSON response
 	response = GET https://api.clever.com+path
 	
@@ -44,14 +59,22 @@ def total_users(record_type,district):
 	#would like to see how this final number is 
 	#tallied to avoid looping through the data indefinitely
 	print count 
-	
-	#taking the pagination link and appending that to the end of the URI in case there are more responses
-	path = response.links[1].uri 
 
-		#designed to continue to count until there is no pagination link at the end
-		} while (path is present);
+	page_through()
 
-	#print the final tall y
-	print count
+#will need to 
+	def page_through():
+	#checking to see if the paging link is present
+		if response.links[1].uri is present 
+
+		#replacing path with the paging link that is prsent 	
+			path = response.links[1].uri 
+
+		#directing user to go back to adding to the total user count with the next path if link
+		#is present
+			total_users()
+			
+		else:
+			move on to the next token in the list 
 
 
