@@ -8,36 +8,61 @@ script, district_id = argv
 #print the prompt so that we can verify that the ID is valid 
 print district_id 
 
+count = 0
+
+#defining the response; setting a variable?
+response = nil
+
+#this is the path/endpoint that will be attached onto the URL to access 
+#the students endpoint; this is the initial endpoint that is used
+path = /v2.0/students
+
+def get_tokens(district_id):
+
+	#will need to retrieve the tokens for all of the districts as 
+	#this is based on each district-app connection
+	district = district_id 
+	
+	Construct Authorization header using client_id and client_secret 
+
+    GET tokens at https://clever.com/oauth/tokens?owner_type=district
+    
+    return token
+
 def multi_school_students(district_id):
-	#I want to retrieve the district specific token at this endpoint
-	GET token at https://clever.com/oauth/tokens?owner_type=district&district={district_id}'
+	
+	Use token to hit path 
 
-	#starting the count at 0 and defining count
-	count = 0
+	Return JSON object 
 
-	#defining the response; setting a variable?
-	response = nil
+	Parse through JSON object
+	
 
-	#this is the path/endpoint that will be attached onto the URL to access 
-	#the students endpoint; this is the initial endpoint that is used
-	path = /v2.0/students
+	#paging through each student in the response body
+	For each student in response.data
 
-	#setting a loop-like function so that we can repeat the steps below until 
-		while(uri is present):
-			#looking to retrieve the response from the students endpoint which will return a JSON response
-			response = GET https://api.clever.com+path
+		If student.schools.len > 1, 
+		#looking if the student is associated with more than 1 school, I am looking to add 1 to the count
+			count = count + 1 
 
-			#paging through each student in the response body
-			For each student in response.data
+			print count 
 
-			If student.schools.len > 1, 
-			#looking if the student is associated with more than 1 school, I am looking to add 1 to the count
-			then count++ 
+		page_through  
+		
+		def page_through():
+		
+			#checking to see if the paging link is present
+			if response.links[1].uri is present 
 
-			path = response.links[1].uri #will need to modify this path as the URI is respnonse.link[2].uri after the initial response
-			#perhaps print path after the retrieval to confirm the uri is correct
-			#if the response has the path present, then we will want to take the URI, attached this to the endpoint and make another call, once it is not present, we want to stop this loop
-			} while (path is present);
+				#replacing path with the paging link that is prsent 	
+				path = response.links[1].uri 
+
+				#directing user to go back to adding to the total user count with the next path if link
+				#is present
+				multi_school_student(district_id)
+
+			else print count 
+			
 
 	#should print the final count
 	print count 
