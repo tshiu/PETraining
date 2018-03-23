@@ -14,21 +14,21 @@ Is this correct? Press enter to proceed or CTRL-C to escape.
 
 raw_input()
 
-	#setting count at 0 to start
-	count = 0
+#setting count at 0 to start
+count = 0
 
-	#setting response as nil now so that it can be called within the loop-like function
-	response = nil 
+#setting response as nil now so that it can be called within the loop-like function
+response = nil 
 
-	#setting path as the endpoint to put record_type from prompt into the endpoint
-	path = /v2.0/{record_type}
+#setting path as the endpoint to put record_type from prompt into the endpoint
+path = /v2.0/{record_type}
 
-	#will set client ID
-	client_ID = [Client_ID_for_district]
-	#will set client secret 
-	client_secret = [Client_Secret_for_district]
+#will set client ID
+client_ID = [Client_ID_for_district]
+#will set client secret 
+client_secret = [Client_Secret_for_district]
 
-def get_tokens(district):
+def get_tokens():
 
 	#will need to retrieve the tokens for all of the districts as 
 	#this is based on each district-app connection
@@ -40,13 +40,11 @@ def get_tokens(district):
     
     return list_of_tokens
 
-get_tokens
+get_tokens()
 
 for token in list_of_tokens:
 
-total_users 
-
-def total_users(record_type,district):
+def total_users(record_type):
 
 	
 	#using token to ping the API to retrieve the JSON response
@@ -60,21 +58,23 @@ def total_users(record_type,district):
 	#tallied to avoid looping through the data indefinitely
 	print count 
 
-	page_through()
+total_users(record_type)
 
 #will need to 
-	def page_through():
-	#checking to see if the paging link is present
-		if response.links[1].uri is present 
+def page_through():
+#checking to see if the paging link is present
+	if response.links[1].uri is present 
 
-		#replacing path with the paging link that is prsent 	
-			path = response.links[1].uri 
+	#replacing path with the paging link that is prsent 	
+		path = response.links[1].uri 
 
-		#directing user to go back to adding to the total user count with the next path if link
-		#is present
-			total_users()
+	#directing user to go back to adding to the total user count with the next path if link
+	#is present
+		total_users()
 			
-		else:
-			move on to the next token in the list 
+	else:
 
+		move on to the next token in the list 
+
+page_through()
 
