@@ -41,6 +41,7 @@ def get_tokens():
     
     return list_of_tokens
 
+    print "This is list of tokens: %d" % list_of_tokens
 get_tokens()
 
 def page_through():
@@ -76,5 +77,4 @@ def total_users(record_type):
 for token in list_of_tokens:
 #the record type is set from before
 total_users(record_type)
-
 
