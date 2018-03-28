@@ -1,0 +1,45 @@
+Exercise 34 
+
+animals = ['bear', 'python', 'peacock', 'kangaroo', 'whale', 'platypus']
+
+ 1. The animal at 1.
+	The second animal is at 1 and is a python.
+
+ 2. The third animal.
+ 	The third animal is at 2 and is a peacock. 
+
+ 3. The first animal.
+	The first animal is at 0 and is a bear. 
+
+ 4. The animal at 3.
+ 	The fourth animal is at 3 and is a kangaroo. 
+
+ 5. The fifth animal.
+ 	The fifth animal is at 4 and is a whale. 
+
+ 6. The animal at 2.
+ 	The third animal is at 2 and is a peacock.
+
+ 7. The sixth animal.
+ 	The sixth animal is at 5 and is a platypus. 
+
+ 8. The animal at 4.
+ 	The fifth animal is at 4 and is a whale. 
+
+
+ SD
+
+ 1. Cardinal numbers answers the question of 'How Many?', whereas ordinal numbers
+ 	tell ust he position of something in a list. 
+
+ 2. 2010 is really 2010 because years are ordered. Year 1 was the first year; there was 
+ 	no year 0. 
+
+ candy = ['snickers', 'kitkat', 'whoppers']
+
+ 3. The candy at 0 is snickers. Snickers is first in the list. 
+
+ 4. Checked! print candy[0] results in Snickers 
+
+
+
