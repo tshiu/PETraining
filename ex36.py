@@ -74,19 +74,16 @@ def lip_sync_wig():
 	print "While you are dancing to Roar, your wig begins to shift."
 	print "What do you do to save the performance: clip or throw the wig?"
 
-	wig_fallen = False 
+	next = raw_input("> ")
 
-	while True:
-		next = raw_input("> ")
+	if next == "clip":
+		sashay_away("Always just throw off the wig!")
 
-		if next == "clip":
-			sashay_away("Always just throw off the wig!")
+	elif next == "throw":
+		reveal()
 
-		elif next == "throw" and not wig_fallen:
-			reveal()
-
-		else:
-			print "I'm not sure what to make of that."	
+	else:
+	        print "I'm not sure what to make of that."	
 
 def reveal():
 	print "How many reveals do you have during the performance?"
