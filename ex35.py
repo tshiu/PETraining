@@ -6,8 +6,8 @@ def gold_room():
 
 	#setting the variable next to the raw input that should answer the question before
 	next = str(raw_input("> "))
-	# If the string in next contains either 1 or 0, we will set the variable how_much
-	# to the integer of next
+	# Is the string is recognized as a number, then we will set the variable how_much to 
+	# the integer value of the raw_input earlier added
 	if next.isdigit() == True:
 		how_much = int(next)
 
