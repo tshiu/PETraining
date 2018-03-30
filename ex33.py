@@ -40,30 +40,32 @@ for num in numbers:
 #SD
 #1. Conver while-loop to a function you can call
 
-def print_numbers_to_6():
+
+def print_numbers():
 	
+	n = int(raw_input("What number would you like to sum to? \n"))
 	i = 0 
 
 	the_list = []
 
-	while i < 6:
+	while i < n:
 
-		print "At the top is %d" % i 
+    	    print "At the top is %d" % i 
 
-		the_list.append(i)
+	    the_list.append(i)
 
-		i = i + 1
+	    i = i + 1
 
-		print "Numbers now:", numbers 
+	    print "Numbers now:", the_list 
 
-		print "At the bottom i is %d" % i 
+	    print "At the bottom i is %d" % i 
 
 	print "The numbers: " 
 
 	for num in the_list:
-		print num 
+	    print num 
 
-print_numbers_to_6()
+print_numbers()
 
 
 #2. function that can try different numbers
@@ -77,20 +79,20 @@ def print_numbers(start,stop):
 
 	while i < stop:
 
-		print "At the top is %d" % i 
+	    print "At the top is %d" % i 
 
-		the_list.append(i)
+	    the_list.append(i)
 
-		i = i + 1
+	    i = i + 1
 
-		print "Numbers now:", numbers 
+	    print "Numbers now:", the_list 
 
-		print "At the bottom i is %d" % i 
+	    print "At the bottom i is %d" % i 
 
 	print "The numbers: " 
 
 	for num in the_list:
-		print num 
+	    print num 
 
 print_numbers(2,4)
 
@@ -105,20 +107,20 @@ def print_numbers_step(start,stop,step):
 
 	while i < stop:
 
-		print "At the top is %d" % i 
+	    print "At the top is %d" % i 
 
-		the_list.append(i)
+	    the_list.append(i)
 
-		i = i + step
+	    i = i + step
 
-		print "Numbers now:", numbers 
+	    print "Numbers now:", the_list 
 
-		print "At the bottom i is %d" % i 
+	    print "At the bottom i is %d" % i 
 
 	print "The numbers: " 
 
 	for num in the_list:
-		print num 
+	    print num 
 
 print_numbers_step(2,10,3)
 
@@ -132,24 +134,24 @@ def print_numbers_range(start,stop):
 
 	for i in range(start,stop):
 
-		print "At the top is %d" % i 
+	    print "At the top is %d" % i 
 
-		the_list.append(i)
-
-
-		print "Numbers now:", the_list
+	    the_list.append(i)
 
 
-		bottom_number = i + 1
+	    print "Numbers now:", the_list
 
-		
-		print "At the bottom i is %d" % bottom_number
+
+	    bottom_number = i + 1
 
 		
-		#for number in the_list:
+	    print "At the bottom i is %d" % bottom_number
+
+		
+	    #for number in the_list:
 
 
-			#print "At the bottom i is %d" % i 
+	    #print "At the bottom i is %d" % i 
 
 
 print_numbers_range(0,6)
