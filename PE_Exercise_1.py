@@ -22,26 +22,25 @@ count = 0
 response = nil 
 
 #setting path as the endpoint to put record_type from prompt into the endpoint
-path = /v2.0/{record_type}
+path = "/v2.0/%s" % record_type   
 
-#will set client ID
-client_ID = [Client_ID_for_district]
-#will set client secret 
-client_secret = [Client_Secret_for_district]
+#will set client ID based on query
+client_ID = [Client_ID_for_application]
+#will set client secret based on query
+client_secret = [Client_Secret_for_application]
 
 def get_tokens():
 
-	#will need to retrieve the tokens for all of the districts as 
-	#this is based on each district-app connection
-	owner_type = district 
+    #will need to retrieve the tokens for all of the districts as 
+    #this is based on each district-app connection
+    owner_type = district 
 	
-	Construct Authorization header using client_id and client_secret 
+    Construct Authorization header using client_id and client_secret 
 
     GET tokens at https://clever.com/oauth/tokens?owner_type=district
     
     return list_of_tokens
 
-    print "This is list of tokens: %d" % list_of_tokens
 get_tokens()
 
 def page_through():
@@ -49,11 +48,11 @@ def page_through():
 	while response.links[1].uri is present: 
 
 	#replacing path with the paging link that is prsent 	
-		path = response.links[1].uri 
+	    path = response.links[1].uri 
 
-		directing user to go back to adding to the total user count with the next path if link
-		#is present
-		total_users()
+	    directing user to go back to adding to the total user count with the next path if link
+	    #is present
+	    total_users()
 			
 	
 	move on to the next token in the list 
@@ -77,4 +76,5 @@ def total_users(record_type):
 for token in list_of_tokens:
 #the record type is set from before
 total_users(record_type)
+
 
