@@ -1,10 +1,10 @@
 #Write a function that takes in two lists, sorts each list, then merges two sorted lists into a new sorted list.
 
-#TS I combined the lists first because then the master list would be sorted. Otherwise, we would have to sort again
-#after combining the lists to produce a sorted list? 
-
 
 #combine the lists in a way that they are sorted so you don't have to sort it again 
+#I wasn't sure how to complete the above? Not quite sure how to combine and sort without actually
+#just sorting.
+
 def sort_lists(list1, list2):
 
 	print sorted(list1 + list2)
