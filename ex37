@@ -1,0 +1,185 @@
+#and
+
+#should evaluate False
+True and False 
+
+#del - removes an item from a list given it's index instead of the value
+	#del a[0] will remove the first element from the list a 
+a_list = ['cat', 'dog', 'bird', 'turtle']
+
+print a_list
+
+del a_list[2]
+
+print a_list
+
+#from 
+
+from sys import argv parameter_1 parameter_2
+
+#not 
+
+#should print True
+True and not(False)
+
+#while 
+
+while n > 1:
+
+	print "Your input is greater than 1"
+
+#global 
+	#A declaration which holds for the entire code block. 
+	#It means that the listed identifiers are to be interpreted as globals.
+
+globevar = 0 
+
+def set_globvar_to_one():
+	#0 was set as a global variable so we need the below
+	#line in order to modify the global variable
+	global globevar
+	globevar = 1 
+
+
+def print_globevar(): 
+	print globevar
+
+set_globvar_to_one()
+print_globevar()
+
+
+#assert - The assert statement verifies that the expression defined resolves to true. 
+#If it does not it will raise an AssertionError with an optional expression2.
+#used as a convenient way to debug something
+
+assert True
+assert False 
+
+
+#pass - A null operation. When this is executed nothing happens.
+#usually used a placeholder when a statement is required but no code needs to happen yes
+
+def function():
+	pass 
+
+
+#except - When a try statement fails, the except catches the failure and returns.
+
+def divide(n, n2):
+	except ZeroDivisionError:
+		print("division by zero!")
+
+#class - An object that contains functions and can be instantiated. A way to take a grouping 
+#of functions and data and place them inside a container so you can access them with a '.'
+#operator 
+
+#exec - Allows for the dynamic execution of Python code. Execute code.
+
+#Below example in python terminal
+>>> mycode = 'print "hello world"'
+>>> exec(mycode)
+Hello world
+
+#raise - Used to call an exception that can be customized per situation.
+#intended to signal an error situation and meant to check for it. 
+
+if (a < b):
+	raise ValueErrror()
+
+#continue -Skip the rest of the current loop and continue loop cycle.
+
+#this will print our all the letters except for h (PYTON)
+for letter in 'Python':     
+   if letter == 'h':
+      continue
+   print 'Current Letter :', letter
+
+#try and finally
+
+#try - Specifies exception handlers and/or cleanup code for a group of statements.
+#finally -The finally statement is the cleanup function in a 'try' statement. While all 
+#of the try... except... else are executed, if an exception is raised it is parsed and printed 
+#in the finally statement. This also causes any application that is preemptively interrupted to 
+#still execute the finally statement before closing out of the loop.
+
+#example below will always print "printy"
+def fav_number():
+        try:
+                response = int(raw_input("What's your favorite number"))
+        except StandardError, e:
+                print "Error - ",e
+        finally:
+                print "printy"
+        print response
+        return response
+
+#lambda- Creates an anonymous function that is not bound to a specific namespace.
+#mostly used when we require a nameless function for a short amount of time
+
+double = lambda x: x * 2
+
+#almost the same as 
+
+def double(x):
+   return x * 2
+
+
+String Escape Sequences
+
+String Formats
+ • %d - signed decimal 
+ • %i - signed decimal (same as %d)
+ • %o - octal
+ • %u - signed decimal (obsolete)
+ • %x - signed hex, lowercase
+ • %X - signed hex, uppercase
+ • %e - floating point in exponential format, lowercase
+ • %E - floating point in exponential format, uppercase
+ • %f - floating point in decimal format
+ • %F - floating point in decimal format 
+ • %g - floating point format if less than 
+ • %G - floating point uppercase exponential is less than -4, decimal format
+ 		otherwise
+ • %c - single character
+ • %r - string, converts using repr(), "x"
+ • %s - string, converts using str(), x 
+ • %% - no argument converted. results in '%' in the result
+
+
+ Operators
+ • + 
+ • -
+ • *
+ • ** - exponentiation 
+ • / - divide
+ • // - quotient, division without any remainder
+ • % - modulo, sets remainder 
+ • <
+ • >
+ • <=
+ • >=
+ • ==
+ • !=
+ • <>
+ • ( ) - tuple
+ • [ ] - list
+ • { } - set 
+ • @
+ • ,
+ • :
+ • =
+ • ;
+ • += - add and assignment operater. add right operand to the left and assigns
+ 		the result to the left operand 
+ 		ex. c += a is equivalent to c = c + a 
+ • -= - subtract and assignment operator. subtracts right operand from the left
+ 		and assigns the result to the left operand 
+ 		ex. c -= a is equivalent to c = c -a 
+ • *= - multiply and assignment operator, mutliplies the right and the left and 
+ 		assigns the result to the left
+ 		ex. c = a is equivlaent to c = c * a 
+ • /= - c/=a is equivalent to c = c/a 
+ • //=  follows same pattern as above 
+ • %= 	^
+ • **= 	^
+
