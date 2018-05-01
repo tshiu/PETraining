@@ -44,7 +44,17 @@ print 'd'.join(stuff[2:4])
 
 #1. Above
 #2. OK
-#3. Yes, object-oriented programming was confusing but I looked at the chapters ahead and took some notes
+#3. Yes, object-oriented programming was confusing but I looked at the chapters ahead and took some notes.
+
+#My basic understanding is that previously, programming was mainly logic focused. Object oriented programming
+#takes a different approach in that we are stating that the important thing is the object/data that
+#we are working with as opposted to the logic. OOP needs to first identify everyhting that we want to work with
+#in a step called data modeling. Once that has been identified then it is called a class of objects. 
+
+#Object oriented programming is beneficial because  because we can break things into classes and subclasses and 
+#we only work with the objects that are relevant so this is more efficient(?). 
+#https://searchmicroservices.techtarget.com/definition/object-oriented-programming-OOP
+
 #4. This too was confusing but took notes in my notebook from the upcoming chapters.
 #5. Defintion I found: Dir(something) gives you all the attributes of the object. The class is 
 	#like the blueprint for the house. Not sure I completely understand, but will continue to study up on this.
