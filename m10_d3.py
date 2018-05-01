@@ -20,6 +20,7 @@ def sum(number):
 
 def factorial(number):
 
+
 	pcount = 1
 
 	while (number >= 1):
@@ -32,7 +33,19 @@ def factorial(number):
 
 	return pcount
 
-n = int(raw_input("What number would you like to calculate? \n")) 
+
+
+while True:
+	
+	try:
+		
+		n = int(raw_input("What number would you like to calculate? \n")) 
+		
+		break 
+
+	except ValueError: 
+
+		print("Not a valid integer. Try again!")
 
 choice = str(raw_input("Would you like the sum or the factorial? \n"))
 
