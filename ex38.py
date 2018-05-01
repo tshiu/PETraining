@@ -37,13 +37,15 @@ print stuff.pop()
 #printing the list of stuff but 'joined'; this removes the spaces
 #join stuff with '' in between them
 print ''.join(stuff) # what? cool!
-#joins the fourth and sixth items in the list with the '#' in the middle
+#This joins the fourth and fifth items on the list with # in betwee
 print '#'.join(stuff[3:5]) # super stellar! 
-#joins the third and fifth items in the stuff list with 'd' in between
+#joins the third and fourth items in the stuff list with 'd' in between
 print 'd'.join(stuff[2:4])
 
 #1. Above
-#2. OK
+#2. OK. They are the same thing in that Join things with '' in between and call join with ''and things will result
+#in joining the 'things' with spaces? 
+
 #3. Yes, object-oriented programming was confusing but I looked at the chapters ahead and took some notes.
 
 #My basic understanding is that previously, programming was mainly logic focused. Object oriented programming
