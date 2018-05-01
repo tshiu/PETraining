@@ -24,9 +24,9 @@ True and not(False)
 
 #while 
 
-while n > 1:
+while n < 1:
 
-	print "Your input is greater than 1"
+	print "Your input is less than 1"
 
 #global 
 	#A declaration which holds for the entire code block. 
