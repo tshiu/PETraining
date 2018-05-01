@@ -24,9 +24,9 @@ True and not(False)
 
 #while 
 
-while n < 1:
+while n > 1:
 
-	print "Your input is less than 1"
+	print "Your input is greater than 1"
 
 #global 
 	#A declaration which holds for the entire code block. 
@@ -74,6 +74,10 @@ def divide(n, n2):
 #operator 
 
 #exec - Allows for the dynamic execution of Python code. Execute code.
+#found out that the exec function can be used to call terminal functions like ls or cd?
+#Much of the documentation actually
+#argues against using exec. From what I understand it seems to allow you to call a piece
+#of code after it is created whilst something else is being run?
 
 #Below example in python terminal
 >>> mycode = 'print "hello world"'
@@ -164,7 +168,19 @@ String Formats
  • ( ) - tuple
  • [ ] - list
  • { } - set 
- • @
+ • @ - #missed this one!
+ #this is defined as a decorator; pie syntax
+ #this allows you to decorate a function with another function
+ #in https://stackoverflow.com/questions/1053732/what-does-mean-in-python 
+ @login_required
+ def my_function():
+ 	pass
+
+ #is equivalent to 
+
+ def my_function():
+ 	pass
+ my function = login_required(my_function)
  • ,
  • :
  • =
@@ -179,7 +195,8 @@ String Formats
  		assigns the result to the left
  		ex. c = a is equivlaent to c = c * a 
  • /= - c/=a is equivalent to c = c/a 
- • //=  follows same pattern as above 
+ • //=  c//=a is equavlent to c = c//a #this results in a whole number as opposed to float like above
  • %= 	^
- • **= 	^
+ • **=  c **= a is equivalent to c = c**a. The ** is raising it to the a exponent.
+ - *=   c *= a is equivalent to c = c * a. This is multiplication function.
 
