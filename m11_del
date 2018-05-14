@@ -1,0 +1,3 @@
+Consider a student in Clever. What is it an instance of? What classes could it belong to? Is a student like a dictionary?
+
+A student in Clever is probably an instance of user. Student could belong the a user or person Class. The student object is like a dicitionary with the array of fields: {school:[school ID], sections:[sections IDs], etc.}
